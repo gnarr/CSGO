@@ -3,7 +3,7 @@
 ###########################################################
 FROM cm2network/steamcmd:root
 
-LABEL maintainer="walentinlamonos@gmail.com"
+LABEL maintainer="gnarr.c@gmail.com"
 
 ENV STEAMAPPID 740
 ENV STEAMAPPDIR /home/steam/csgo-dedicated
@@ -32,7 +32,7 @@ RUN set -x \
 			echo 'quit'; \
 		} > ${STEAMAPPDIR}/csgo_update.txt \
 		&& cd ${STEAMAPPDIR}/csgo \
-		&& wget -qO- https://raw.githubusercontent.com/CM2Walki/CSGO/dev/etc/cfg.tar.gz | tar xvzf - \
+		&& wget -qO- https://raw.githubusercontent.com/gnarr/CSGO/dev/etc/cfg.tar.gz | tar xvzf - \
 		&& wget -qO- https://mms.alliedmods.net/mmsdrop/1.10/mmsource-1.10.7-git971-linux.tar.gz | tar xvzf - \
 		&& wget -qO- https://sm.alliedmods.net/smdrop/1.10/sourcemod-1.10.0-git6454-linux.tar.gz | tar xvzf -" \
 	&& apt-get remove --purge -y \
