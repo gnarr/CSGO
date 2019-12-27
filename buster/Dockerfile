@@ -3,7 +3,7 @@
 ###########################################################
 FROM cm2network/steamcmd:root
 
-LABEL maintainer="walentinlamonos@gmail.com"
+LABEL maintainer="gnarr.c@gmail.com"
 
 ENV STEAMAPPID 740
 ENV STEAMAPPDIR /home/steam/csgo-dedicated
@@ -32,7 +32,7 @@ RUN set -x \
 			echo 'quit'; \
 		} > ${STEAMAPPDIR}/csgo_update.txt \
 		&& cd ${STEAMAPPDIR}/csgo \
-		&& wget -qO- https://raw.githubusercontent.com/CM2Walki/CSGO/dev/etc/cfg.tar.gz | tar xvzf -" \
+		&& wget -qO- https://raw.githubusercontent.com/gnarr/CSGO/dev/etc/cfg.tar.gz | tar xvzf -" \
 	&& apt-get remove --purge -y \
 		wget \
 	&& apt-get clean autoclean \
